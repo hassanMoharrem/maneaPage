@@ -230,6 +230,10 @@ header nav .nav-link:hover{
 .w-95{
     width: 95px;
 }
+.wh-150{
+    width: 200px;
+    height: 200px;
+}
 .h-120px{
     height: 120px;
     overflow-y: hidden;
@@ -237,13 +241,50 @@ header nav .nav-link:hover{
 .font-20{
     font-size: 20px;
 }
+.shadow-circle::before {
+    content: "";
+    position: absolute;
+    top: 27px;
+    left: 26px;
+    right: 20px;
+    bottom: 25px;
+    background: linear-gradient(to bottom, #5A29D6, #3859EE);
+    border-radius: 50%;
+    filter: blur(22px);
+    z-index: 1;
+  }
+  .line-circle-row::after{
+    content: "";
+    position: absolute;
+    width: 25%;
+    height: 2px;
+    bottom: 50%;
+    translate: 0% -50%;
+    background: linear-gradient(to bottom, rgba(103, 23, 205, 0.3), rgba(40, 113, 250, 0.3));
+  }
+  .line-circle-row-rtl::after{
+    content: "";
+    position: absolute;
+    width: 25%;
+    height: 2px;
+    bottom: 50%;
+    translate: -100% 0%;
+    background: linear-gradient(to bottom, rgba(103, 23, 205, 0.3), rgba(40, 113, 250, 0.3));
+  }
+  .time-line::before{
+    content: "";
+    width: 2px;
+    height: 100%;
+  background: linear-gradient(to bottom, rgba(103, 23, 205, 0.3), rgba(40, 113, 250, 0.3));
+     position: absolute;
+  }
 .mt-n-50{
     margin-top: -50px;
 }
 
 .line-after::before{
     content: "";
-    width: 1px;
+    width: 2px;
     background: var(--bg-linear);
     height: 100%;
     position: absolute;
@@ -313,6 +354,13 @@ footer .form-control:focus {
     color: var(--label);
     border: 1px solid #1D2032 !important;
 }
+.h-180{
+    height: 180px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 @media (max-width: 768px) {
     .menu-sm {
         position: fixed;
@@ -375,5 +423,18 @@ footer .form-control:focus {
     }
     .image-hard{
         width:85%
+    }
+    .line-circle-row{
+        margin-bottom: 20px;
+    }
+    .line-circle-row-rtl{
+        margin-bottom: 20px;
+
+    }
+    .line-circle-row::after{
+        display: none;
+    }
+    .line-circle-row-rtl::after{
+        display: none;
     }
 }
